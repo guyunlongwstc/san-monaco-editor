@@ -1,6 +1,6 @@
 {
   "name": "san-monaco-editor",
-  "version": "1.0.0-beta.3",
+  "version": "1.0.0-rc.1",
   "description": "基于monaco封装的代码编辑器",
   "main": "lib/index.js",
   "typings": "types/index.d.ts",
