@@ -1,0 +1,171 @@
+/**
+* @file main.less
+* @author guyunlong
+*/
+
+.main-content {
+    flex: 1;
+}
+
+.doc-content {
+    flex: 1;
+    margin: 0 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: ~"calc(100vw - 415px)";
+    
+    .markdown-body .san-component-container {
+        img {
+            max-width: 100%;
+        }
+
+        code {
+            white-space: inherit;
+            padding: 0 5px;
+            margin: 0 5px;
+            background: #eceff8;
+            border-radius: 4px;
+        }
+
+        a {
+            color: #108cee;
+
+            code {
+                color: #1b7fd1;
+            }
+        }
+
+        pre {
+            background-color: #f6f8fa;
+            border-radius: 4px;
+            font-size: 85%;
+            line-height: 1.45;
+            overflow: auto;
+            padding: 16px;
+            margin-top: 10px;
+
+            code {
+                background-color: transparent;
+                padding: 0;
+                margin: 0;
+                color: #666;
+            }
+        }
+
+        > table {
+            display: table;
+            overflow: auto;
+            margin: 16px 0;
+            width: 100%;
+
+            thead {
+                tr {
+                    background-color: #f6f8fa;
+                }
+            }
+
+            tr {
+                background-color: #fff;
+                border-top: 1px solid #c6cbd1;
+            }
+
+            td,
+            th {
+                border: 1px solid #dfe2e5;
+                padding: 10px 14px;
+                font-size: 14px;
+            }
+        }
+        ul {
+            padding: 0;
+        }
+        h1 {
+            font-weight: 700;
+            font-size: 30px;
+            margin-bottom: 30px;
+            display: flex;
+        }
+
+        h2 {
+            font-weight: 600;
+            margin: 24px 0;
+            font-size: 24px;
+            display: flex;
+            border: none;
+        }
+
+        h3 {
+            font-weight: 500;
+            margin: 20px 0;
+            font-size: 20px;
+            display: flex;
+        }
+
+        h4 {
+            font-weight: 400;
+            font-size: 16px;
+            color: #000;
+            margin: 10px 0;
+            display: flex;
+        }
+
+        p {
+            color: #333;
+            line-height: 24px;
+            margin: 0;
+            font-size: 14px;
+        }
+
+        hr {
+            margin: 20px 0;
+            height: 0;
+            border: none;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .hljs {
+            margin: 20px 0;
+
+            code {
+                background: none;
+                padding: 0;
+            }
+        }
+
+        blockquote {
+            margin: 0 0 20px;
+            padding: 10px 20px;
+            border-left: 5px solid #ecf0f1;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        ol {
+            list-style: decimal;
+            padding-left: 16px;
+            margin: 10px 0;
+        }
+    }
+
+    .s-doc-demo {
+        border: 1px solid #eaefef;
+        border-radius: 5px;
+        padding: 20px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        min-height: 200px;
+
+        .san-child-component {
+            margin: 20px 0;
+            display: block;
+        }
+    }
+}
+
+@import './table.less';
+
+
+
+

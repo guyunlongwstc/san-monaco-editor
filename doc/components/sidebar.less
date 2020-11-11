@@ -1,0 +1,72 @@
+/**
+ * @file sidebar.less
+ * @author guyunlong
+ */
+
+.s-nav {
+    position: fixed;
+    height: 100%;
+    width: 200px;
+    border-right: solid 1px #ccc;
+
+    h3 {
+        border-bottom: 1px solid #eee;
+        padding: 20px;
+        text-align: center;
+        color: #999;
+    }
+
+    .s-search-box {
+        padding: 10px;
+
+        input {
+            padding-left: 10px;
+            width: 160px;
+            height: 28px;
+        }
+    }
+
+    .s-nav-menu {
+        overflow: auto;
+        height: ~'calc(100% - 108px)';
+
+        menu {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+        }
+
+        li {
+            list-style: none;
+
+            a {
+                font-size: 14px;
+                display: block;
+                padding: .2em 24px;
+                text-decoration: none;
+                color: #999;
+                outline: none;
+                line-height: 30px;
+
+                &:hover {
+                    color: #1890ff;
+                    background: #eaf6fe;
+                }
+
+                &.disabled {
+                    opacity: .3;
+                    pointer-events: none;
+                }
+            }
+
+            &.s-nav-menu-item-selected {
+                a {
+                    color: #1890ff;
+                    background: #eaf6fe;
+                    border-left: solid 4px #108cee;
+                }
+            }
+        }
+    }
+}

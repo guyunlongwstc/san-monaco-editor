@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>san-monaco-editor</title>
+    <link
+      rel="stylesheet"
+      href="https://bce.bdstatic.com/iconfont/iconfont.css"
+    />
+    <script src="https://bce.bdstatic.com/ecom/esl/2.2.0-rc.3/esl.js"></script>
+    <script>
+      require.config({
+        baseUrl: "../",
+        paths: {
+          monaco: "/monaco",
+          bootstrap: "/bootstrap",
+        },
+      });
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      require(["bootstrap"], function (b) {
+        b.startUp();
+      });
+    </script>
+  </body>
+</html>

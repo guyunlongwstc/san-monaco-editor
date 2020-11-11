@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>san-monaco-editor</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://bce.bdstatic.com/iconfont/iconfont.css">
+    <link rel="stylesheet" href="https://code.bdstatic.com/npm/github-markdown-css@3.0.1/github-markdown.css">
+    <link rel="stylesheet" href="https://code.bdstatic.com/npm/highlight.js@9.17.1/styles/atom-one-light.css">
+    <script src="https://bce.bdstatic.com/ecom/esl/2.2.0-rc.3/esl.js"></script>
+    <script>
+      require.config({
+          baseUrl: '../',
+          paths: {
+              'san': 'https://unpkg.com/san@latest/dist/san.dev',
+              'san-router': 'https://code.bdstatic.com/npm/san-router@1.2.2/index'
+          }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      require(["bootstrap"], function (b) {
+        b.startUp();
+      });
+    </script>
+  </body>
+</html>

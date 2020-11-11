@@ -1,0 +1,11 @@
+node_modules/
+scripts/
+.vscode/
+
+.babelrc
+.editorconfig
+.gitignore
+.npmrc
+ci.yml
+styleLint.config.js
+yarn.lock

@@ -1,0 +1,51 @@
+/**
+* @file toc.less
+* @author guyunlong
+*/
+
+.toc-item() {
+    color: #108cee;
+
+    &:before {
+        display: block;
+        position: absolute;
+        left: -1px;
+        content: '';
+        width: 2px;
+        height: 20px;
+        background: #108cee;
+    }
+}
+
+.s-toc {
+    position: fixed;
+    height: auto;
+    width: 160px;
+    right: 0;
+    top: 44px;
+    padding: 5px 10px 5px 20px;
+    border-left: solid 1px #eaecef;
+    ul {
+        padding-left: 16px;
+        margin: 10px 0;
+        list-style: disc;
+    }
+
+    li {
+        line-height: 24px;
+        margin: 5px 0;
+        font-size: 14px;
+    }
+    .s-doc-toc-item a {
+        color: #333;
+        line-height: 20px;
+
+        &:hover {
+            .toc-item();
+        }
+    }
+
+    .s-doc-toc-item-selected a {
+        .toc-item();
+    }
+}
