@@ -18,7 +18,7 @@ $ npm install san-monaco-editor
 ```
 
 # 使用方式
-```
+```js
 import { Component } from "san";
 import { MonacoEditor, MonacoDiffEditor } from "monaco";
 
@@ -91,7 +91,7 @@ export default class Demo extends Component {
 # webpack打包按需引入
 ### <a href="https://www.npmjs.com/package/monaco-editor-webpack-plugin" target="_blank">monaco-editor-webpack-plugin</a> 
 下面是webpack配置，具体配置规则参考<a href="https://www.npmjs.com/package/monaco-editor-webpack-plugin">monaco-editor-webpack-plugin</a> 
-```
+```js
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 module.exports = {
   plugins: [
@@ -105,7 +105,7 @@ module.exports = {
 
 # webpack打包css文件冲突
 monaco-editor编辑器在内部使用CSS导入，所以如果您在项目中使用CSS模块，那么默认情况下很可能会发生冲突。为了避免这种情况，分别对应用和monaco-editor使用css-loader进行处理：
-```
+```js
 const path = require('path');
 const APP_DIR = path.resolve(__dirname, './src');
 const MONACO_DIR = path.resolve(__dirname, './node_modules/monaco-editor');
@@ -128,3 +128,59 @@ const MONACO_DIR = path.resolve(__dirname, './node_modules/monaco-editor');
   use: ['style-loader', 'css-loader'],
 }
 ```
+
+# MonacoEditor
+#### Props
+输入框的属性说明如下：
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| value | 绑定值 | string | 空 |
+| readonly | 只读 | bool | false |
+| width | 宽度 | string、number | '100%' |
+| height | 高度 | string、number | '100%' |
+| amd | 依赖的所有语言包通过amd方式加载 | bool | true |
+| srcPath | 静态资源路径，当amd为true时生效，默认路径为cdn地址 | string | https://code.bdstatic.com/npm/monaco-editor@0.21.2/min/ |
+| language | 编辑器语言 | string | javascript |
+| theme | 编辑器主题 | string | vs |
+| options | 编辑器选项 | object | {} |
+
+
+#### 事件
+输入框对外暴露的事件如下：
+
+| 方法名 | 说明 | 参数 |
+| --- | --- | --- |
+| on-change | 改变时触发 | event: Event |
+| on-attached | 编辑器挂载到dom节点时触发 | event: Event |
+| on-detached | 编辑器从页面卸载时触发 | event: Event |
+
+
+
+# MonacoDiffEditor
+#### Props
+输入框的属性说明如下：
+
+| 属性 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| originalValue | 初始代码 | string | 空 |
+| modifiedValue | 对比代码 | string | 空 |
+| readonly | 只读 | bool | false |
+| width | 宽度 | string、number | '100%' |
+| height | 高度 | string、number | '100%' |
+| amd | 依赖的所有语言包通过amd方式加载| bool | true |
+| srcPath | 静态资源路径，当amd为true时生效，默认路径为cdn地址 | string | https://code.bdstatic.com/npm/monaco-editor@0.21.2/min/ |
+| language | 编辑器语言 | string | javascript |
+| theme | 编辑器主题 | string | vs |
+| options | 编辑器选项 | object | {} |
+
+
+#### 事件
+输入框对外暴露的事件如下：
+
+| 方法名 | 说明 | 参数 |
+| --- | --- | --- |
+| on-change | 改变时触发 | event: Event |
+| on-attached | 编辑器挂载到dom节点时触发 | event: Event |
+| on-detached | 编辑器从页面卸载时触发 | event: Event |
+
